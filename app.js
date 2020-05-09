@@ -8,6 +8,8 @@ const session = require('express-session');
 const flash = require('connect-flash');
 // import mongoose
 const mongoose = require('mongoose');
+const cors = require("cors");
+
 mongoose.connect('mongodb+srv://raka123:raka123@devconnector-ayagw.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -15,6 +17,7 @@ mongoose.connect('mongodb+srv://raka123:raka123@devconnector-ayagw.mongodb.net/d
   useFindAndModify: false,
 });
 
+app.use(cors())
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // router admin
