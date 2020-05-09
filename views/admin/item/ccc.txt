@@ -1,0 +1,1 @@
+src="https://admin-staycation.herokuapp.com/<%= item.imageId[x].imageUrl %>" 
