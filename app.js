@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://raka123:raka123@devconnector-ayagw.mongodb.net/d
   useFindAndModify: false,
 });
 
-app.use(cors())
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // router admin
@@ -39,6 +39,7 @@ app.use(session({
   }
 }));
 app.use(flash());
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
